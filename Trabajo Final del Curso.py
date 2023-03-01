@@ -1,18 +1,18 @@
-#Desarrollo de un  sistema de registro de pedidos por teléfono en python:
+#Desarrollo de un  sistema de registro de pedidos por teléfono utilizando tkinter python:
+# Primero escribimos tkinter para utilizar sus widgets: Tk,Label,Button y Entry.                                                           
+from tkinter import Tk, Label, Button, Entry                                               
+#Definir función.                                                                                            
+def calcularST1():                                                                          #NOTA:
 
-from tkinter import Tk, Label, Button, Entry
-
-def calcularST1():
-
-    v1 = txt7.get()
-    v2 = txt8.get()
-    v3 = txt11.get()
-    v4 = txt12.get()
-    v5 = txt15.get()
-    v6 = txt16.get()
-    ST = float(v1)*float(v2)
-    txt9.delete(0,"end")
-    txt9.insert(0,ST)
+    v1 = txt7.get()                                                                         #TK:Es una interfaz
+    v2 = txt8.get()                                                                         #Label:Muestra textos o imagenes
+    v3 = txt11.get()                                                                        #Button:Un boton que se presiona para la ejecusión
+    v4 = txt12.get()                                                                        #Entry:Es para introducir texto
+    v5 = txt15.get()                                                                  #fg(foreground):Cambiar color de texto
+    v6 = txt16.get()                                                                  #bg(darkgreen):Modifica color de fondo
+    ST = float(v1)*float(v2)                                                          #place:Ubica elemntos como "x,y"
+    txt9.delete(0,"end")                                                              #heifht:Para medir la altura que queremos de la página
+    txt9.insert(0,ST)                                                                 #width: Para medir el ancho que queremos de la pagina
     ST2 = float(v3)*float(v4)
     txt13.delete(0,"end")
     txt13.insert(0,ST2)
@@ -22,39 +22,39 @@ def calcularST1():
     T = ST + ST2 + ST3
     txt18.delete(0,"end")
     txt18.insert(0,T)
-
+#Empieza el diseño de la página:
 ventana = Tk()
 ventana.geometry("600x450")
-ventana.title("FACTURA ELECTRONICA")
+ventana.title("BOLETA ELECTRONICA")
 ventana.configure(bg="#DCDCDC")
-# Definir tamaño del cuadro a la vez color,tamaño y fuente de letra
-lab0 = Label(ventana,text='Ferreteria El Tornillo Feliz', font=("Arial",15), fg= "#000000", bg="#DCDCDC")
+# Definir tamaño y posicion del cuadro a la vez color,tamaño y fuente de letra.
+lab0 = Label(ventana,text='Ferretería El Tornillo Feliz', font=("Arial",16), fg= "#000000", bg="#DCDCDC")
 lab0.place(x=170,y=10)
 
-lab1 = Label(ventana, text='DNI: ',font=("Arial",9), fg="#000000", bg="#DCDCDC")
-lab1.place(x=40,y=50, height=25)
+lab1 = Label(ventana, text='DNI: ',font=("Arial",10), fg="#000000", bg="#DCDCDC")
+lab1.place(x=76,y=50, height=25)
 txt1 = Entry(ventana)
-txt1.place(x=100, y=50, width=70, height=25)
+txt1.place(x=110, y=53, width=70, height=25)
 
-lab2 = Label(ventana, text='APELLIDOS: ', font=("Arial",9), fg="#000000" , bg="#DCDCDC")
-lab2.place(x=20, y=90)
+lab2 = Label(ventana, text='APELLIDOS: ', font=("Arial",10), fg="#000000" , bg="#DCDCDC")
+lab2.place(x=28, y=90)
 txt2 = Entry(ventana)
-txt2.place(x=100,y=90, width=130, height=25)
+txt2.place(x=110,y=92, width=130, height=25)
 
-lab3 = Label(ventana, text='NOMBRES: ' ,font=("Arial",9), fg="#000000" ,bg="#DCDCDC")
-lab3.place(x=300,y=90)
+lab3 = Label(ventana, text='NOMBRES: ' ,font=("Arial",10), fg="#000000" ,bg="#DCDCDC")
+lab3.place(x=302,y=90)
 txt3 = Entry(ventana)
-txt3.place(x=370,y=90, width=130, height=25)
+txt3.place(x=380,y=92, width=130, height=25)
 
-lab4 = Label(ventana, text='DIRECCION: ', font=("Arial",9), fg="#000000", bg="#DCDCDC")
-lab4.place(x=20, y=130)
+lab4 = Label(ventana, text='DIRECCION: ', font=("Arial",10), fg="#000000", bg="#DCDCDC")
+lab4.place(x=28, y=130)
 txt4 = Entry(ventana)
-txt4.place(x=100, y=130, width=350, height=25)
+txt4.place(x=110, y=132, width=350, height=25)
 
-lab5 = Label(ventana, text='TELELEFONO: ', font=("Arial",9), fg="#000000", bg="#DCDCDC")
-lab5.place(x=20, y=170)
+lab5 = Label(ventana, text='TELELEFONO: ', font=("Arial",10), fg="#000000", bg="#DCDCDC")
+lab5.place(x=13, y=170)
 txt5 = Entry(ventana)
-txt5.place(x=100, y=170, width=350, height=25)
+txt5.place(x=110, y=170, width=350, height=25)
 
 lab6 = Label(ventana, text='Codigo de producto', font=("Arial",11), fg="#000000", bg="#DCDCDC")
 lab6.place(x=20, y=210)
@@ -109,7 +109,7 @@ lab12.place(x=428,y=350)
 txt18 = Entry(ventana)
 txt18.place(x=498, y= 350, width=65, height=25)
 
-
+#Una forma mas sencilla para ver el resultado de la creación de la página se copia en el IDLE de python y se ejecuta.
 
 
     
