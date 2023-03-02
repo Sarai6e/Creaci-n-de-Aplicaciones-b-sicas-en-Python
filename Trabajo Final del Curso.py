@@ -13,7 +13,7 @@ def calcularST1():                                                              
     ST = float(v1)*float(v2)                                                          #place:Ubica elemntos como "x,y"
     txt9.delete(0,"end")                                                              #heifht:Para medir la altura que queremos de la página
     txt9.insert(0,ST)                                                                 #width: Para medir el ancho que queremos de la pagina
-    ST2 = float(v3)*float(v4)
+    ST2 = float(v3)*float(v4)                                                         #font:Fuente de letras
     txt13.delete(0,"end")
     txt13.insert(0,ST2)
     ST3 = float (v5)*float(v6)
@@ -101,8 +101,15 @@ txt16.place(x=423,y=310,width=60, height=25)
 txt17 = Entry(ventana)
 txt17.place(x=498,y=310,width=65, height=25)
 
+#Boton para calcular el total;
 btn = Button(ventana, text='Calcular Total', font=("Arial",11),command = calcularST1, bg="#DCDCDC", fg="#000000")
 btn.place(x=190, y=350)
+#Boton para información:
+btn2 = Button(ventana, text='Información', font=("Arial",11),command =  calcularST1,bg="#DCDCDC", fg="#000000")
+btn2.place(x=95, y=350)
+#Boton para limpiar:
+btn3 = Button(ventana, text='Limpiar', font=("Arial",11),command = calcularST1, bg="#DCDCDC", fg="#000000")
+btn3.place(x=30, y=350)
 
 lab12 = Label(ventana,text='TOTAL: ', font=("Arial",11), fg="#000000", bg="#DCDCDC")
 lab12.place(x=428,y=350)
